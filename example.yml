@@ -1,0 +1,24 @@
+src:
+  host: 192.168.1.3
+  port: 3306
+  database: test
+  username: root
+  password: 11111
+dest:
+  host: 192.168.1.200
+  port: 5432
+  database: test
+  username: test
+  password: 11111
+pageSize: 100000
+maxParallel: 30
+batchRowSize: 1000
+tables:
+  test1:
+    - select * from test1
+  test2:
+    - select * from test2
+exclude:
+  operalog1
+  operalog2
+  operalog3
